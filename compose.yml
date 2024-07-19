@@ -1,0 +1,12 @@
+services:
+  oatpp:
+    image: oatpp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    develop:
+      watch:
+        - action: rebuild
+          path: .
